@@ -26,15 +26,18 @@
 
   - Some bash code examples:
     - Conditional Execution:
+    
   ```sh
     git commit && git push  *(and conditional)*
     git commit || echo "Commit failed"  *(or conditional)*
   ```
     - Brace Expansion
+    
   ```sh
     {1..5} equivalent to 1 2 3 4 5
   ```
     - Variables:
+    
   ```
     FILE_NAME="abc"
     echo $FILE_NAME
