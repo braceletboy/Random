@@ -23,20 +23,21 @@
   executes the commands in a variety of dot files. These startup scripts are
   similar to Bash shell scripts (scripts that have the directive #!/bin/bash
   in them).
-
-  - Some bash code examples:
-    - Conditional Execution:
+  
+  - Conditional Execution:
     
   ```sh
     git commit && git push  *(and conditional)*
     git commit || echo "Commit failed"  *(or conditional)*
   ```
-    - Brace Expansion
+  
+  - Brace Expansion
     
   ```sh
     {1..5} equivalent to 1 2 3 4 5
   ```
-    - Variables:
+  
+  - Variables:
     
   ```
     FILE_NAME="abc"
