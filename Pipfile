@@ -9,6 +9,8 @@ verify_ssl = true
 jupyterlab = "*"
 pandas = "*"
 seaborn = "*"
+jupyterlab-code-formatter = "*"
+autopep8 = "*"
 
 [requires]
 python_version = "3.6"
