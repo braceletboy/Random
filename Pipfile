@@ -11,6 +11,9 @@ pandas = "*"
 seaborn = "*"
 jupyterlab-code-formatter = "*"
 autopep8 = "*"
+scikit-learn = "*"
+statsmodels = "*"
+bokeh = "*"
 
 [requires]
 python_version = "3.6"
