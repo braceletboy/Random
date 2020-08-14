@@ -57,7 +57,7 @@ def get_bpoints(args):
     restaurants_data['location_type'] = 'restaurant'
     datasets = [bus_stops_data, hospitals_data, restaurants_data]
     merged_data = pd.concat(datasets)
-
+    
     # convert latitude and longitude from degrees to radians
     merged_data.loc[:, 'latitude'] = merged_data.loc[:, 'latitude']*np.pi/180
     merged_data.loc[:, 'longitude'] = merged_data.loc[:, 'longitude']*np.pi/180
@@ -77,12 +77,10 @@ def get_bpoints(args):
         merged_data[['latitude', 'longitude']].to_numpy()))[-args.num_bpoints:]
     bpoint_indices = np.flip(bpoint_indices)  # order descendingly
     best_locations = merged_data.iloc[bpoint_indices]
-
+    
     # convert latitude and longitude from radians to degrees
-    best_locations.loc[:, 'latitude'] = (
-        best_locations.loc[:, 'latitude']*180/np.pi)
-    best_locations.loc[:, 'longitude'] = (
-        best_locations.loc[:, 'longitude']*180/np.pi)
+    best_locations.loc[:, 'latitude'] = best_locations.loc[:, 'latitude']*180/np.pi
+    best_locations.loc[:, 'longitude'] = best_locations.loc[:, 'longitude']*180/np.pi
 
     best_locations.index = range(1, 6)  # show the ranks of the locations
     return best_locations
